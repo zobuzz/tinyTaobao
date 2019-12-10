@@ -122,7 +122,6 @@ static    void* m_device = NULL;
         return nil;
     }
     
-    
     //remove bgfx
     /*
     bgfx::PlatformData pd;

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		072CF2F4239E3177004022BF /* AsterTiny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 072CF2F1239E1E05004022BF /* AsterTiny.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		072CF2F6239E33B0004022BF /* AsterTiny.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 072CF2F1239E1E05004022BF /* AsterTiny.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0741F9F4239F5BC100D7C427 /* MoleTiny3D.asm.js in Resources */ = {isa = PBXBuildFile; fileRef = 0741F9F1239F5BC100D7C427 /* MoleTiny3D.asm.js */; };
 		0741F9F5239F5BC100D7C427 /* MoleTiny3D.mem in Resources */ = {isa = PBXBuildFile; fileRef = 0741F9F2239F5BC100D7C427 /* MoleTiny3D.mem */; };
 		0741F9F6239F5BC100D7C427 /* MoleTiny3D.js in Resources */ = {isa = PBXBuildFile; fileRef = 0741F9F3239F5BC100D7C427 /* MoleTiny3D.js */; };
@@ -21,6 +19,8 @@
 		07590D932397813400615628 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07590D922397813400615628 /* JavaScriptCore.framework */; };
 		0761EC2D239A3B0800F29477 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0761EC2C239A3B0800F29477 /* Metal.framework */; };
 		0780B3F7239E4F7200576128 /* Data in Resources */ = {isa = PBXBuildFile; fileRef = 0780B3F6239E4F7200576128 /* Data */; };
+		F426D0A1239F9AD700979A46 /* AsterTiny.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F426D0A0239F9AD700979A46 /* AsterTiny.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F426D0A2239F9AE500979A46 /* AsterTiny.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426D0A0239F9AD700979A46 /* AsterTiny.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				072CF2F6239E33B0004022BF /* AsterTiny.framework in Embed Frameworks */,
+				F426D0A1239F9AD700979A46 /* AsterTiny.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -38,7 +38,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		072CF2F1239E1E05004022BF /* AsterTiny.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsterTiny.framework; path = ../AsterTiny.framework; sourceTree = "<group>"; };
 		0741F9F1239F5BC100D7C427 /* MoleTiny3D.asm.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = MoleTiny3D.asm.js; sourceTree = "<group>"; };
 		0741F9F2239F5BC100D7C427 /* MoleTiny3D.mem */ = {isa = PBXFileReference; lastKnownFileType = file; path = MoleTiny3D.mem; sourceTree = "<group>"; };
 		0741F9F3239F5BC100D7C427 /* MoleTiny3D.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = MoleTiny3D.js; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		0780B3F2239E4F1100576128 /* 43e4361aee992cb48a374635fe459401 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 43e4361aee992cb48a374635fe459401; sourceTree = "<group>"; };
 		0780B3F3239E4F1100576128 /* 46b433b264c69cbd39f04ad2e5d12be8 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 46b433b264c69cbd39f04ad2e5d12be8; sourceTree = "<group>"; };
 		0780B3F6239E4F7200576128 /* Data */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Data; sourceTree = "<group>"; };
+		F426D0A0239F9AD700979A46 /* AsterTiny.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AsterTiny.framework; path = Frameworks/AsterTiny.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				072CF2F4239E3177004022BF /* AsterTiny.framework in Frameworks */,
+				F426D0A2239F9AE500979A46 /* AsterTiny.framework in Frameworks */,
 				0761EC2D239A3B0800F29477 /* Metal.framework in Frameworks */,
 				07590D932397813400615628 /* JavaScriptCore.framework in Frameworks */,
 			);
@@ -76,6 +76,7 @@
 		07590D6F2397802D00615628 = {
 			isa = PBXGroup;
 			children = (
+				F426D0A0239F9AD700979A46 /* AsterTiny.framework */,
 				0741F9F1239F5BC100D7C427 /* MoleTiny3D.asm.js */,
 				0741F9F3239F5BC100D7C427 /* MoleTiny3D.js */,
 				0741F9F2239F5BC100D7C427 /* MoleTiny3D.mem */,
@@ -115,7 +116,6 @@
 		07590D912397813300615628 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				072CF2F1239E1E05004022BF /* AsterTiny.framework */,
 				0761EC2C239A3B0800F29477 /* Metal.framework */,
 				07590D922397813400615628 /* JavaScriptCore.framework */,
 			);
@@ -342,9 +342,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76Q3QH5MFC;
+				DEVELOPMENT_TEAM = Z6SFPV59E3;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = /Users/xingweizhu/Documents/;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/xingweizhu/Documents/,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = TestJSiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -365,9 +368,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 76Q3QH5MFC;
+				DEVELOPMENT_TEAM = Z6SFPV59E3;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = /Users/xingweizhu/Documents/;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Users/xingweizhu/Documents/,
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = TestJSiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

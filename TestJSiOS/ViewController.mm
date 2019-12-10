@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "AppDelegate.h"
+//#import <UIKit/UIKit.h>
+
 #include <JavaScriptCore/JavaScriptCore.h>
 #include <fstream>
 #include <sys/stat.h>
@@ -14,15 +17,18 @@
 #include <iostream>
 #include <sstream>
 
-//#include "bgfx.h"
+#import <AsterTiny/AsterTiny.h>
 
 JSGlobalContextRef globalContext;
 JSObjectRef tickCallbackRef;
 
 CGFloat screenWidth;
 CGFloat screenHeight;
+View* gView;
+
 namespace UnityTB{
     using namespace std;
+    
     
     std::string JSStringToStdString(JSStringRef jsString) {
         size_t maxBufferSize = JSStringGetMaximumUTF8CStringSize(jsString);
@@ -441,6 +447,9 @@ namespace UnityTB{
     }
 }
 
+void* getPlatformWindowHandle() {
+    return (__bridge void*)(gView);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -455,6 +464,12 @@ namespace UnityTB{
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     screenWidth = screenRect.size.width;
     screenHeight = screenRect.size.height;
+    
+    gView = (View*)self.view;
+    
+    AsterTiny::AsterTinyInstance* instance = AsterTiny::create(globalContext);
+    instance->getPlatformWindowHandle = getPlatformWindowHandle;
+
     //XMLHttpRequest *xmlHttpRequest = [XMLHttpRequest new];
     //id jsContext = [JSContext contextWithJSGlobalContextRef:globalContext];
     

@@ -1,0 +1,6 @@
+framework module AsterTiny {
+  umbrella header "AsterTiny.h"
+
+  export *
+  module * { export * }
+}
